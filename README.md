@@ -36,7 +36,7 @@ Stage 1:
 - Map *lower* visual cortex fMRI activities to VQ-VAE latent image embeddings.
 
 Stage 2:
-- Generate images conditioned on mapped latent text and image features
+- Generate images using LDM (Stable Diffusion) conditioned on mapped latent text and image features
 
 ## Architectures
 - fMRI-to-text module
@@ -56,12 +56,26 @@ Stage 2:
 - [THINGS-fMRI](https://openneuro.org/datasets/ds004192/versions/1.0.7)
 
 # Results
-## Feature Decoding
+
+Baseline: [Takagi & Nishimoto, 2023](https://openaccess.thecvf.com/content/CVPR2023/papers/Takagi_High-Resolution_Image_Reconstruction_With_Latent_Diffusion_Models_From_Human_Brain_CVPR_2023_paper.pdf)
+
+## Stage 1: Feature Decoding
 *Nonlinear* models significantly outperformed linear baselines in decoding fMRI to image and text latent spaces.
 
 ![plot](/figures/Table3.jpg)
 
-## 
+## Stage 2: Image Reconstruction
+Our proposed *CNN-based fMRI-to-text* module and *GCN-based fMRI-to-image* module yielded best reconstruction results qualitatively and quantitatively in both NSD and THINGS-fMRI datasets.
+
+![plot](/figures/Table4.jpg)
+
+Sample reconstructed images from NSD dataset:
+
+![plot](/figures/NSD.png)
+
+Sample reconstructed images from THINGS-fMRI dataset:
+
+<img src="figures/things.png" alt="plot" width="300"/>
 
 
 # Implementation Details
