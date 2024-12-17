@@ -113,7 +113,7 @@ and change file paths accordingly to make sure everything is stored in the inten
 ```evaluation.ipynb```: evaluation
 
 # Let's Connect!
-I'd love to chat about related research ideas, potential collaborations, or just anything interesting!
-
 
 :e-mail: **Yuchen Hou** |  [GitHub](https://github.com/subawocit) | [LinkedIn](https://www.linkedin.com/in/yuchen-hou-b95083205/) | [Webpage](https://bionicvisionlab.org/people/hou_yuchen/)
+
+I'd love to chat about related research ideas, potential collaborations, or just anything interesting!
