@@ -77,6 +77,12 @@ Sample reconstructed images from THINGS-fMRI dataset:
 
 <img src="figures/things.png" alt="plot" width="400"/>
 
+All reconstructed images are available: [Google Drive](https://drive.google.com/drive/folders/13K7H1X_cuCKwYBZGEG3xxEtBNYyuUJcM?usp=drive_link)
+
+
+# Conclusion
+Our work introduced four brain-to-stimuli decoding methods and showed the capability of nonlinear brain-inspired architectures in reconstructing images from fMRI data, providing potential insights into visual reconstructions for Brain-Computer Interface applications.
+
 
 # Implementation Details
 ## Environment Setup
@@ -89,7 +95,6 @@ conda activate ldm
 
 Install Stable Diffusion v1.4 (under the diffusion_sd1/ directory), download checkpoint (sd-v1-4.ckpt), and place it under the ```codes/diffusion_sd1/stable-diffusion/models/ldm/stable-diffusion-v1/``` directory.
 
-All reconstructed images are available: [Google Drive](https://drive.google.com/drive/folders/13K7H1X_cuCKwYBZGEG3xxEtBNYyuUJcM?usp=drive_link)
 
 note: I hard-coded some file paths, please do 
 ```sh
@@ -107,5 +112,12 @@ and change file paths accordingly to make sure everything is stored in the inten
 
 ```evaluation.ipynb```: evaluation
 
+# Let's Connect!
+I'd love to chat about related research ideas, potential collaborations, or just anything interesting!
 
 
+**Yuchen Hou**
+
+:computer: [GitHub](https://github.com/subawocit)
+
+:envelope: [LinkedIn](https://www.linkedin.com/in/yuchen-hou-b95083205/)
