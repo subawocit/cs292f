@@ -14,7 +14,7 @@ Our contributions are:
 ![plot](/figures/model_overview.png)
 **Figure 1.** Proposed framework overview, image adapted from [Takagi & Nishimoto, 2023](https://openaccess.thecvf.com/content/CVPR2023/papers/Takagi_High-Resolution_Image_Reconstruction_With_Latent_Diffusion_Models_From_Human_Brain_CVPR_2023_paper.pdf) and [Lu et al., 2023](https://dl.acm.org/doi/10.1145/3581783.3613832).
 
-:link: For environment setup and required weights and datasets, please see: [Implementation Details Section](#implementation-details)
+:link: For environment setup, please see: [Implementation Details Section](#implementation-details)
 
 :bookmark_tabs: For further reading, please see: [final_report.pdf](/final_report.pdf)
 
@@ -116,8 +116,4 @@ and change file paths accordingly to make sure everything is stored in the inten
 I'd love to chat about related research ideas, potential collaborations, or just anything interesting!
 
 
-**Yuchen Hou**
-
-:computer: [GitHub](https://github.com/subawocit)
-
-:envelope: [LinkedIn](https://www.linkedin.com/in/yuchen-hou-b95083205/)
+:e-mail: **Yuchen Hou** |  [GitHub](https://github.com/subawocit) | [LinkedIn](https://www.linkedin.com/in/yuchen-hou-b95083205/) | [Webpage](https://bionicvisionlab.org/people/hou_yuchen/)
