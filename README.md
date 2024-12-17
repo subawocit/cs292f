@@ -75,7 +75,7 @@ Sample reconstructed images from NSD dataset:
 
 Sample reconstructed images from THINGS-fMRI dataset:
 
-<img src="figures/things.png" alt="plot" width="500"/>
+<img src="figures/things.png" alt="plot" width="400"/>
 
 
 # Implementation Details
