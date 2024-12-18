@@ -19,21 +19,21 @@ Our contributions are:
 :bookmark_tabs: For further reading, please see: [final_report.pdf](/final_report.pdf)
 
 # Introduction
-Reconstructing images from brain activities could provide valuable insights into neural coding mechanisms. 
+Reconstructing images from brain activity can provide valuable insights into neural coding mechanisms. 
 
-Recent works in brain-to-image tasks often relied on having linear projections from fMRI features to pre-trained latent spaces, which may not fully capture the brain's nonlinear neural coding, or lacked comprehensive comparisons across various nonlinear architectures.
+Recent works in brain-to-image tasks sometimes relied on having linear projections from fMRI features to pre-trained latent spaces, which may not fully capture the brain's nonlinear neural coding.
 
 To address these gaps:
 - We explored nonlinear architectures (CNN, VAE, GCN) for brain-to-image decoding.
-- We incorporated LDM (Stable Diffusion) to reconstruct high-fidelity images from neural activities.
+- We incorporated LDM (Stable Diffusion) to reconstruct high-fidelity images from neural activity.
 
 # Methods
 ## Pipeline
-Inspired by [Takagi & Nishimoto, 2023](https://openaccess.thecvf.com/content/CVPR2023/papers/Takagi_High-Resolution_Image_Reconstruction_With_Latent_Diffusion_Models_From_Human_Brain_CVPR_2023_paper.pdf) and the fact that lower visual cortex is more relevant to low-level image features such as edges and higher visua cortex is associated with high-level semantic information, our reconstruction pipeline consists of two stages:
+Inspired by [Takagi & Nishimoto, 2023](https://openaccess.thecvf.com/content/CVPR2023/papers/Takagi_High-Resolution_Image_Reconstruction_With_Latent_Diffusion_Models_From_Human_Brain_CVPR_2023_paper.pdf) and the understanding that the lower visual cortex is more relevant to low-level image features (e.g., edges and colors) while the higher visual cortex is associated with high-level semantic information, our reconstruction pipeline consists of two stages:
 
 Stage 1:
-- Map *higher* visual cortex fMRI activities to CLIP latent text embeddings.
-- Map *lower* visual cortex fMRI activities to VQ-VAE latent image embeddings.
+- Map *higher* visual cortex fMRI activity to CLIP latent text embeddings.
+- Map *lower* visual cortex fMRI activity to VQ-VAE latent image embeddings.
 
 Stage 2:
 - Generate images using LDM (Stable Diffusion) conditioned on mapped latent text and image features
@@ -47,9 +47,9 @@ Stage 2:
     3. GCN-based: 
         - Two ChebConv layers with BatchNorm and ReLU
         - To construct fMRI graph representation from raw fMRI signals:
-            - Neurons from visual cortex V1 and V2 were treated as two separate nodes, and V3 and V4 were conbined into another node.
-            - Graph node's *features* were the corresponding ROI's normalized voxel activities.
-            - Graph *edges* were computed by the funtional connectivity across nodes using Pearson's correlation coefficient.
+            - Neurons from visual cortex V1 and V2 were treated as two separate nodes, and V3 and V4 were combined into another node.
+            - Graph node's *features* were the corresponding ROI's normalized voxel activity.
+            - Graph *edges* were computed by the functional connectivity across nodes using Pearson's correlation coefficient.
 
 ## Datasets
 - [The Natural Scenes Dataset (NSD)](https://naturalscenesdataset.org/)
@@ -65,7 +65,7 @@ Baseline: [Takagi & Nishimoto, 2023](https://openaccess.thecvf.com/content/CVPR2
 ![plot](/figures/Table3.jpg)
 
 ## Stage 2: Image Reconstruction
-Our proposed *CNN-based fMRI-to-text* module and *GCN-based fMRI-to-image* module yielded best reconstruction results qualitatively and quantitatively in both NSD and THINGS-fMRI datasets.
+Our proposed *CNN-based fMRI-to-text* module and *GCN-based fMRI-to-image* module yielded the best reconstruction results, both qualitatively and quantitatively, in the NSD and THINGS-fMRI datasets.
 
 ![plot](/figures/Table4.jpg)
 
@@ -96,7 +96,7 @@ conda activate ldm
 Install Stable Diffusion v1.4 (under the diffusion_sd1/ directory), download checkpoint (sd-v1-4.ckpt), and place it under the ```codes/diffusion_sd1/stable-diffusion/models/ldm/stable-diffusion-v1/``` directory.
 
 
-note: I hard-coded some file paths, please do 
+Note: I hard-coded some file paths, please do 
 ```sh
 grep -r '/hdd/yuchen'
 ```
@@ -104,11 +104,11 @@ and change file paths accordingly to make sure everything is stored in the inten
 
 ## File Descriptions
 
-```generate_files.ipynb```: generating fmri and image data files
+```generate_files.ipynb```: generating fMRI and image data files
 
-```roi_image_encoder.ipynb```: mapping low-level fmri to image CLIP space using GCN
+```roi_image_encoder.ipynb```: mapping low-level fMRI to image CLIP space using GCN
 
-```roi_text_encoder.ipynb```: mapping high-level fmri to text CLIP space using GCN
+```roi_text_encoder.ipynb```: mapping high-level fMRI to text CLIP space using GCN
 
 ```evaluation.ipynb```: evaluation
 
@@ -116,4 +116,4 @@ and change file paths accordingly to make sure everything is stored in the inten
 
 :e-mail: **Yuchen Hou** |  [GitHub](https://github.com/subawocit) | [LinkedIn](https://www.linkedin.com/in/yuchen-hou-b95083205/) | [Webpage](https://bionicvisionlab.org/people/hou_yuchen/)
 
-I'd love to chat about related research ideas, potential collaborations, or just anything interesting!
+Let's chat about related research ideas, potential collaborations, or just anything!
