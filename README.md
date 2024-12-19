@@ -116,4 +116,4 @@ and change file paths accordingly to make sure everything is stored in the inten
 
 :e-mail: **Yuchen Hou** |  [GitHub](https://github.com/subawocit) | [LinkedIn](https://www.linkedin.com/in/yuchen-hou-b95083205/) | [Webpage](https://bionicvisionlab.org/people/hou_yuchen/)
 
-Let's chat about related research ideas, potential collaborations, or just anything!
+:rocket: I'm always happy to chat about research ideas, potential collaborations, or anything you're passionate about!
